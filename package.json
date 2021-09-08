@@ -9,7 +9,7 @@
     "main": "app.js",
     "scripts": {
         "build-release": "webpack --mode production",
-        "start": "export $(cat .env | grep \"^[^#;]\" |xargs) && export NODE_PROFILE_ACTIVE=PROD && node -r elastic-apm-node/start --unhandled-rejections=strict ./dist/app.js",
+        "start": "export $(cat .env | grep \"^[^#;]\" |xargs) && node -r elastic-apm-node/start --unhandled-rejections=strict ./dist/app.js",
         "debug": "export DEBUG=* && tsc && node --unhandled-rejections=strict ./dist/app.js",
         "test": "jest"
     },
